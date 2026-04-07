@@ -69,8 +69,15 @@ const Index = () => {
 
         {/* Content */}
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-6 py-24 text-center">
-          <p className="mb-6 font-[Amiri] text-2xl font-bold tracking-wide drop-shadow-lg md:text-3xl" style={{ color: '#d4af37', textShadow: '0 2px 8px rgba(180, 140, 20, 0.4)' }}>
-            Sunnah for Ummah
+          <p
+            className="mb-6 font-[Amiri] text-3xl font-bold tracking-wide md:text-4xl animate-pulse"
+            style={{
+              color: '#f5d778',
+              textShadow: '0 0 10px rgba(245, 215, 120, 0.9), 0 0 30px rgba(212, 175, 55, 0.7), 0 0 60px rgba(212, 175, 55, 0.4), 0 0 100px rgba(212, 175, 55, 0.2)',
+              filter: 'brightness(1.2)',
+            }}
+          >
+            ✦ Sunnah for Ummah ✦
           </p>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm backdrop-blur-sm">
             <Star className="h-4 w-4 fill-current text-accent" />

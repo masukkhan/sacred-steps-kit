@@ -69,6 +69,9 @@ const Index = () => {
 
         {/* Content */}
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-6 py-24 text-center">
+          <p className="mb-6 font-[Amiri] text-2xl font-bold tracking-wide text-accent drop-shadow-lg md:text-3xl">
+            Sunnah for Ummah
+          </p>
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm backdrop-blur-sm">
             <Star className="h-4 w-4 fill-current text-accent" />
             <span>Complete Pilgrimage Essentials</span>

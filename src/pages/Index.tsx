@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -6,6 +6,18 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Card, CardContent } from "@/components/ui/card";
 import { toast } from "sonner";
 import { Package, Phone, MapPin, User, Star, CheckCircle2 } from "lucide-react";
+
+import kaabaImg from "@/assets/kaaba.jpg";
+import nabawiImg from "@/assets/masjid-nabawi.jpg";
+import arafatImg from "@/assets/mount-arafat.jpg";
+import minaImg from "@/assets/mina-tents.jpg";
+
+const SLIDES = [
+  { src: kaabaImg, label: "The Holy Kaaba — Mecca" },
+  { src: nabawiImg, label: "Masjid an-Nabawi — Medina" },
+  { src: arafatImg, label: "Mount Arafat" },
+  { src: minaImg, label: "Mina — Tent City" },
+];
 
 const MALE_ITEMS = Array.from({ length: 21 }, (_, i) => `Essential Item ${i + 1}`);
 const FEMALE_ITEMS = Array.from({ length: 22 }, (_, i) => `Essential Item ${i + 1}`);
@@ -16,6 +28,14 @@ const Index = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   const items = kit === "male" ? MALE_ITEMS : FEMALE_ITEMS;
 
@@ -31,27 +51,50 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,0.03) 35px, rgba(255,255,255,0.03) 70px)`,
-          }} />
-        </div>
-        <div className="relative mx-auto max-w-3xl px-6 py-20 text-center">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm">
+      {/* Hero with slideshow */}
+      <section className="relative overflow-hidden text-primary-foreground" style={{ minHeight: 420 }}>
+        {/* Background slideshow */}
+        {SLIDES.map((slide, i) => (
+          <img
+            key={i}
+            src={slide.src}
+            alt={slide.label}
+            className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
+            style={{ opacity: i === currentSlide ? 1 : 0 }}
+            {...(i === 0 ? {} : { loading: "lazy" as const })}
+          />
+        ))}
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-primary/70" />
+
+        {/* Content */}
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-6 py-24 text-center">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm backdrop-blur-sm">
             <Star className="h-4 w-4 fill-current text-accent" />
             <span>Complete Pilgrimage Essentials</span>
           </div>
-          <h1 className="mb-4 font-[Amiri] text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+          <h1 className="mb-4 font-[Amiri] text-4xl font-bold leading-tight md:text-5xl lg:text-6xl drop-shadow-lg">
             Hajj & Umrah Kit
           </h1>
-          <p className="mx-auto max-w-lg text-lg text-primary-foreground/80">
+          <p className="mx-auto max-w-lg text-lg text-primary-foreground/90 drop-shadow">
             Everything you need for a blessed journey — carefully curated and packed in one convenient kit.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-6 text-sm text-primary-foreground/70">
+          <div className="mt-8 flex items-center justify-center gap-6 text-sm text-primary-foreground/80">
             <span className="flex items-center gap-1.5"><Package className="h-4 w-4" /> 21+ Items</span>
             <span className="flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4" /> Quality Assured</span>
+          </div>
+          {/* Slide label & dots */}
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <p className="text-xs tracking-wide text-primary-foreground/70 uppercase">{SLIDES[currentSlide].label}</p>
+            <div className="flex gap-2">
+              {SLIDES.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  className={`h-2 rounded-full transition-all ${i === currentSlide ? "w-6 bg-accent" : "w-2 bg-primary-foreground/40"}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

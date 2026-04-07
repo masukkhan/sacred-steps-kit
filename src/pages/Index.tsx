@@ -11,6 +11,7 @@ import kaabaImg from "@/assets/kaaba.jpg";
 import nabawiImg from "@/assets/masjid-nabawi.jpg";
 import arafatImg from "@/assets/mount-arafat.jpg";
 import minaImg from "@/assets/mina-tents.jpg";
+import logoImg from "@/assets/logo.png";
 
 const SLIDES = [
   { src: kaabaImg, label: "The Holy Kaaba — Mecca" },

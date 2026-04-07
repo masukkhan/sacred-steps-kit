@@ -70,6 +70,7 @@ const Index = () => {
 
         {/* Content */}
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-6 py-24 text-center">
+          <img src={logoImg} alt="Sunnah for Ummah logo" className="mb-4 h-28 w-28 drop-shadow-2xl md:h-36 md:w-36" style={{ filter: 'drop-shadow(0 0 20px rgba(212, 175, 55, 0.5))' }} />
           <p
             className="mb-6 font-[Amiri] text-3xl font-bold tracking-wide md:text-4xl animate-pulse"
             style={{

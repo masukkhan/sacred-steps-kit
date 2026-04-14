@@ -70,14 +70,6 @@ const Index = () => {
 
         {/* Content */}
         <div className="relative mx-auto flex max-w-3xl flex-col items-center justify-center px-6 py-16 text-center md:py-20">
-          <img
-            src={logoImg}
-            alt="Sunnah for Ummah logo"
-            className="mb-6 h-44 w-44 drop-shadow-2xl md:h-56 md:w-56 lg:h-64 lg:w-64"
-            style={{
-              filter: 'drop-shadow(0 0 30px rgba(212, 175, 55, 0.6)) drop-shadow(0 0 60px rgba(212, 175, 55, 0.3))',
-            }}
-          />
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-1.5 text-sm backdrop-blur-sm">
             <Star className="h-4 w-4 fill-current text-accent" />
             <span>Complete Pilgrimage Essentials</span>

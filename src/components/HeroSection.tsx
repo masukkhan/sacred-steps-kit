@@ -24,7 +24,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden text-primary-foreground" style={{ minHeight: 380 }}>
+    <section className="relative overflow-hidden text-primary-foreground" style={{ minHeight: 320 }}>
       {SLIDES.map((slide, i) => (
         <img
           key={i}

@@ -4,6 +4,7 @@ import FeaturesStrip from "@/components/FeaturesStrip";
 import PackageCards from "@/components/PackageCards";
 import KitItemsGrid from "@/components/KitItemsGrid";
 import OrderForm from "@/components/OrderForm";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   const [selectedPackage, setSelectedPackage] = useState("hajj-male");
@@ -11,6 +12,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <WhatsAppButton />
       <HeroSection />
       <PackageCards selectedPackage={selectedPackage} onSelect={setSelectedPackage} />
       <KitItemsGrid kit={kit} onKitChange={setKit} />

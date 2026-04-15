@@ -12,10 +12,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <FeaturesStrip />
       <PackageCards selectedPackage={selectedPackage} onSelect={setSelectedPackage} />
       <KitItemsGrid kit={kit} onKitChange={setKit} />
       <OrderForm selectedPackage={selectedPackage} />
+      <FeaturesStrip />
 
       {/* Footer */}
       <footer className="border-t border-border bg-card">

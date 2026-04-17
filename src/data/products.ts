@@ -72,7 +72,7 @@ export const PACKAGES = [
     name: "Hajj Package (Men & Women)",
     nameBn: "হজ্জ প্যাকেজ (পুরুষ ও মহিলা)",
     originalPrice: 9800,
-    price: 9400,
+    price: 1200,
     badge: "Best Value",
   },
   {

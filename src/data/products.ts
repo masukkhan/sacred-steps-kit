@@ -17,7 +17,6 @@ export const MALE_ITEMS: KitItem[] = [
   { name: "Hajji Soap (Unscented)", nameBn: "হাজী সাবান", price: 240, category: "hygiene" },
   { name: "Premium Back Bag", nameBn: "প্রিমিয়াম পিঠের ব্যাগ", price: 210, category: "accessories" },
   { name: "Rope", nameBn: "রশি", price: 180, category: "accessories" },
-  { name: "Premium Chest Bag", nameBn: "প্রিমিয়াম বুকের ব্যাগ", price: 130, category: "accessories" },
   { name: "Miswak", nameBn: "মিসওয়াক", price: 70, category: "hygiene" },
   { name: "Foot Socks", nameBn: "পা মোজা", price: 70, category: "clothing" },
   { name: "Waterproof Shoe Bag", nameBn: "ওয়াটারপ্রুফ জুতার ব্যাগ", price: 60, category: "accessories" },
@@ -44,7 +43,7 @@ export const FEMALE_ITEMS: KitItem[] = [
   { name: "Hajji Soap (Unscented)", nameBn: "হাজী সাবান", price: 240, category: "hygiene" },
   { name: "Premium Back Bag", nameBn: "প্রিমিয়াম পিঠের ব্যাগ", price: 210, category: "accessories" },
   { name: "Rope", nameBn: "রশি", price: 180, category: "accessories" },
-  { name: "Premium Chest Bag", nameBn: "প্রিমিয়াম বুকের ব্যাগ", price: 130, category: "accessories" },
+  
   { name: "Hand Gloves", nameBn: "হাত মোজা", price: 70, category: "clothing" },
   { name: "Miswak", nameBn: "মিসওয়াক", price: 70, category: "hygiene" },
   { name: "Foot Socks", nameBn: "পা মোজা", price: 70, category: "clothing" },

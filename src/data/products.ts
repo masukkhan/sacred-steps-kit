@@ -12,7 +12,6 @@ export const MALE_ITEMS: KitItem[] = [
   { name: "Air Pillow", nameBn: "হওয়ায় বালিশ", price: 350, category: "comfort" },
   { name: "Hajji Moisturizing Cream", nameBn: "হাজী ময়েশ্চারাইজিং", price: 310, category: "hygiene" },
   { name: "Waist Foam Belt", nameBn: "কোমরের ফোম বেল্ট", price: 290, category: "accessories" },
-  { name: "Premium Sun Cap", nameBn: "প্রিমিয়াম সান ক্যাপ", price: 290, category: "clothing" },
   { name: "Unscented Hajji Shampoo", nameBn: "গন্ধবিহীন হাজী শ্যাম্পু", price: 280, category: "hygiene" },
   { name: "Waterproof Pocket Prayer Mat", nameBn: "ওয়াটারপ্রুফ পকেট জায়নামাজ", price: 270, category: "spiritual" },
   { name: "Hajji Soap (Unscented)", nameBn: "হাজী সাবান", price: 240, category: "hygiene" },
@@ -39,7 +38,7 @@ export const FEMALE_ITEMS: KitItem[] = [
   { name: "Air Pillow", nameBn: "হওয়ায় বালিশ", price: 350, category: "comfort" },
   { name: "Hajji Moisturizing Cream", nameBn: "হাজী ময়েশ্চারাইজিং", price: 310, category: "hygiene" },
   { name: "Waist Foam Belt", nameBn: "কোমরের ফোম বেল্ট", price: 290, category: "accessories" },
-  { name: "Premium Sun Cap", nameBn: "প্রিমিয়াম সান ক্যাপ", price: 290, category: "clothing" },
+  
   { name: "Unscented Hajji Shampoo", nameBn: "গন্ধবিহীন হাজী শ্যাম্পু", price: 280, category: "hygiene" },
   { name: "Waterproof Pocket Prayer Mat", nameBn: "ওয়াটারপ্রুফ পকেট জায়নামাজ", price: 270, category: "spiritual" },
   { name: "Hajji Soap (Unscented)", nameBn: "হাজী সাবান", price: 240, category: "hygiene" },

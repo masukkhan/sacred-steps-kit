@@ -85,7 +85,7 @@ export const PACKAGES = [
     id: "hajj-female",
     name: "Hajj Package (Women)",
     nameBn: "হজ্জ প্যাকেজ (মহিলা)",
-    price: 4900,
+    price: 6000,
   },
   {
     id: "umrah-combo",

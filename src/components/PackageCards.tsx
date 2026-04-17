@@ -1,6 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { PACKAGES } from "@/data/products";
+import hajjMalePremiumImg from "@/assets/hajj-male-premium.jpg";
+
+const PACKAGE_IMAGES: Record<string, string> = {
+  "hajj-male-premium": hajjMalePremiumImg,
+};
 
 type Props = {
   selectedPackage: string;

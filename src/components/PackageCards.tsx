@@ -1,6 +1,11 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { PACKAGES } from "@/data/products";
+import hajjMalePremiumImg from "@/assets/hajj-male-premium.jpg";
+
+const PACKAGE_IMAGES: Record<string, string> = {
+  "hajj-male-premium": hajjMalePremiumImg,
+};
 
 type Props = {
   selectedPackage: string;
@@ -35,6 +40,16 @@ const PackageCards = ({ selectedPackage, onSelect }: Props) => {
                 <Badge className="absolute -top-2.5 right-4 bg-accent text-accent-foreground font-semibold px-3">
                   {pkg.badge}
                 </Badge>
+              )}
+              {PACKAGE_IMAGES[pkg.id] && (
+                <div className="overflow-hidden rounded-t-lg">
+                  <img
+                    src={PACKAGE_IMAGES[pkg.id]}
+                    alt={pkg.name}
+                    loading="lazy"
+                    className="h-48 w-full object-cover"
+                  />
+                </div>
               )}
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-foreground">{pkg.name}</h3>

@@ -41,6 +41,16 @@ const PackageCards = ({ selectedPackage, onSelect }: Props) => {
                   {pkg.badge}
                 </Badge>
               )}
+              {PACKAGE_IMAGES[pkg.id] && (
+                <div className="overflow-hidden rounded-t-lg">
+                  <img
+                    src={PACKAGE_IMAGES[pkg.id]}
+                    alt={pkg.name}
+                    loading="lazy"
+                    className="h-48 w-full object-cover"
+                  />
+                </div>
+              )}
               <CardContent className="p-6">
                 <h3 className="text-lg font-semibold text-foreground">{pkg.name}</h3>
                 <p className="mt-0.5 text-sm text-muted-foreground font-[Amiri]">{pkg.nameBn}</p>

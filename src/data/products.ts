@@ -79,11 +79,11 @@ export const PACKAGES = [
     nameBn: "হজ্জ প্যাকেজ (পুরুষ)",
     price: 6000,
   },
-  {
+{
     id: "hajj-male-premium",
     name: "Hajj Package (Men) Premium",
     nameBn: "হজ্জ প্যাকেজ (পুরুষ) প্রিমিয়াম",
-    price: 8500,
+    price: 8000,
     badge: "Premium",
     image: "hajj-male-premium",
   },
